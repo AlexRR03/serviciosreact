@@ -26,7 +26,7 @@ export default class BuscadorCoches extends Component {
         let marcas = []
         axios.get(this.urlCoches).then(response=>{
             for (let i = 0; i < response.data.length; i++) {
-                if (marcaCoche == response.data[i].marca) {
+                if (marcaCoche.toLowerCase() == response.data[i].marca.toLowerCase()) {
                   marcas.push(response.data[i])
                   console.log(marcas)
                   this.setState({

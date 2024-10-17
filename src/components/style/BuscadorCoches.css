@@ -1,0 +1,13 @@
+#contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+}
+table,tr,td,th{
+    border: 1px solid black;
+}

@@ -4,7 +4,8 @@ import axios from 'axios'
 
 export default class Empleados extends Component {
     state ={
-        empleados:[]
+        empleados:[],
+        texto:""
     }
     
     
@@ -21,13 +22,18 @@ export default class Empleados extends Component {
     componentDidMount = ()=>{
         this.loadEmpleados()
     }
-    componentDidUpdate =()=>{
-        this.loadEmpleados()
-    }
+    componentDidUpdate =(oldProps)=>{
+        // console.log("Old Props:"+oldProps.idDepartamento)
+        // console.log("Current props:" +this.props.idDepartamento)
+        if(oldProps.idDepartamento != this.props.idDepartamento){
+            this.loadEmpleados();
+        }
+    }   
     render() {
     return (
       <div>
         <h1>Empledos</h1>
+        <h2>{this.state.texto}</h2>
         <table>
             <thead>
                 <tr>

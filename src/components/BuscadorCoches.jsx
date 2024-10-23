@@ -54,7 +54,7 @@ export default class BuscadorCoches extends Component {
         <button>Buscar</button>
         </form>
         <div id='contenedor'>
-        <table>
+        <table  className='table table-dark'>
             <thead >
             <tr>
                 <th>Coche</th>

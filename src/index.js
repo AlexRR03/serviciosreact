@@ -18,7 +18,7 @@ import MenuRutas from './components/MenuRutas';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <div>
-        <MenuRutas/>
+        {/* <MenuRutas/> */}
         <Router/>
     </div>
 );
